@@ -1,0 +1,85 @@
+#wrapper {
+    width: 100%; height: 100%;
+    position: fixed;
+}
+
+.window {
+    border: solid #551a8b 3px;
+    width: 250px; height: 300px;
+    position: absolute;
+    left: 150px; top: 100px;
+    overflow: hidden;
+    opacity: 0.8;
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.3);
+}
+
+.window:hover, .window.new {
+    opacity: 1;
+}
+
+.top_nav {
+    height: 35px;
+}
+
+.right {
+    float: right;
+}
+
+a {
+    padding: 0 2px;
+}
+
+.window .top_nav {
+    background: #ffffff;
+}
+
+.window > textarea {
+    width: inherit; height: inherit;
+    border: none;
+    padding: 10px;
+    margin: 0;
+    resize: none;
+    outline: none;
+    box-sizing: border-box;
+    background: #dfdfff;
+}
+
+.side_nav {
+    left: -100%;
+    width: 50%; height:100%;
+    background: #551a8b;
+
+    position: absolute;
+    top: 0;
+    transition: .3s;
+    padding-right: 15px;
+}
+
+.side_nav li {
+    list-style: none;
+}
+
+.side_nav ol {
+    padding-left: 7px;
+}
+.side_nav.on ol li:after {
+    content:'';
+    display: block;
+    background: #fff;
+    width: 100%; height: 2px;
+    padding-left: 10px;
+}
+
+.side_nav.on {
+    left: 0;
+}
+
+.side_nav li:hover {
+    color: #fff;
+    cursor: pointer;
+}
+
+.side_nav li i {
+    float: right;
+    padding-top: 3px;
+}
